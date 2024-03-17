@@ -1,0 +1,18 @@
+plt.plot(r.history['loss'], label='train loss')
+plt.plot(r.history['val_loss'], label='val loss')
+plt.legend()
+plt.show()
+plt.savefig('LossVal_loss')
+
+# accuracies
+plt.plot(r.history['acc'], label='train acc')
+plt.plot(r.history['val_acc'], label='val acc')
+plt.legend()
+plt.show()
+plt.savefig('AccVal_acc')
+
+import tensorflow as tf
+
+from keras.models import load_model
+
+model.save('facefeatures_new_model.h5')
